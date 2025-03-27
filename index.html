@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Protein Synthesis</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            font-family: sans-serif;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #canvas-container { /* Add some margin below canvas */
+            margin-bottom: 20px;
+            border: 1px solid #ccc; /* Optional: Add border to see canvas edges */
+        }
+        #controls {
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 18px; /* Larger buttons */
+            font-size: 1.1em; /* Larger button text */
+            cursor: pointer;
+            margin: 5px;
+        }
+        #status {
+            margin-top: 5px; /* Reduced top margin */
+            font-weight: bold;
+            font-size: 1.2em; /* Larger status text */
+            min-height: 25px;
+            color: #333;
+        }
+        #instructions {
+            margin-top: 5px;
+            color: #555;
+            font-style: italic;
+            font-size: 1.1em; /* Larger instructions text */
+            min-height: 22px;
+            text-align: center; /* Center instructions */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="canvas-container"></div>
+        <div id="status">Status: Idle</div>
+        <div id="instructions">Click 'Start Transcription'</div>
+        <div id="controls">
+            <button id="start-transcription-btn">Start Transcription</button>
+            <button id="start-translation-btn" disabled>Start Translation</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+    </main>
+    <script src="sketch.js"></script>
+</body>
+</html>
